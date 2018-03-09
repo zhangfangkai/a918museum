@@ -13,7 +13,21 @@ from django.utils import timezone
 from django.shortcuts import render
 
 # Create your views here.
+@csrf_exempt
+def login(req):
+    if req.method == 'GET':
+        return render(req, 'login.html', {})
+        # return HttpResponse('Hello World')
+    else:
+        username = req.POST.get("username")
+        password = req.POST.get("password")
+        data = {}
+        data['password'] = password
+        return render(req, 'index.html', data)
+        # return HttpResponse('Hello World')
+
+@csrf_exempt
 def index(req):
     if req.method == 'GET':
-        return render(req, 'index_horizontal_menu.html', {})
+        return render(req, 'index.html', {})
         # return HttpResponse('Hello World')
