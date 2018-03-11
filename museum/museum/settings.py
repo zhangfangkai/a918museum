@@ -78,16 +78,12 @@ WSGI_APPLICATION = 'museum.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'amc2',
+        'NAME': 'museum',
         'USER': 'root',
-        'PASSWORD': 'xiyinmysql',
-        'HOST': '182.92.202.242',
-        'PORT': '3306',
+        'PASSWORD': 'a110582315400',
+        'HOST': '111.204.220.230',
+        'PORT': '16000',
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
 }
 
 
